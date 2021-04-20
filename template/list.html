@@ -8,7 +8,9 @@
             <div class="card-body">
               <h5 class="card-title">{{eachtodo.title}} {{eachtodo.priority}}</h5>
               <p class="card-text">{{eachtodo.description}}</p>
-              <a href="#" class="btn btn-danger">go somewhere</a>
+              <p class="card-text">{{eachtodo.created_at}}</p>
+              
+              <a href="/delete/{{eachtodo.id}}" class="btn btn-danger">Delete</a>
               
 
 
