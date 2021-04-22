@@ -1,0 +1,53 @@
+{% extends 'index.html' %}
+{% block title %}My Form{% endblock %}
+{% block content %}
+
+<h1 style="text-align: center;margin-top: 1rem;background-color: blue;">Sing in to your account</h1>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-3" style="margin: 1rem auto;">
+            <form method="POST" action="{% url 'submitmyform' %}">
+                {% csrf_token %}
+                <div class="form-group">
+                       <div class="mb-3"></div>
+                         <label for="mytext">firstname</label>
+                         <input type="text" id="mytext" name="mytext" class="form-control">
+                
+                        </div>
+                        <div class="col-md-12" style="margin: 1rem auto;">
+                            <form method="POST" action="{% url 'submitmyform' %}">
+                                {% csrf_token %}
+                                <div class="form-group">
+                                       <div class="mb-3"></div>
+                                         <label for="mytext">lastname</label>
+                                         <input type="text" id="mytext" name="mytext" class="form-control">
+                                
+                                        </div>      
+        <div class="col-md-12" style="margin: 1rem auto;">
+            <form method="POST" action="{% url 'submitmyform' %}">
+                {% csrf_token %}
+                <div class="form-group">
+                       <div class="mb-12"></div>
+                         <label for="mytext">Email</label>
+                         <input type="text" id="mytext" name="mytext" class="form-control">
+                
+                        </div>
+                <div class="form-group">
+                       <div class="mb-12">
+                    
+                         <label for="mytextarea">Password </label>
+                         <textarea id="mytextarea" name="mytextarea" class="form-control" rows="3"></textarea>
+               
+                        </div>
+                <div class="form-group">
+                    <div class="mb-12"></div>
+                        <hr>
+                         <button type="submit" class="btn btn-primary" style="margin: 0 auto;
+                         display: block;">Submit</button> 
+                   </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
